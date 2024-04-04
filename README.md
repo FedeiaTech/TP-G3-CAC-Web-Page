@@ -45,7 +45,7 @@ Issues:
 
 Index:
 
-* Issue #1: Implementar un slider de imágenes [(Explicacion)](https://soyrafaramos.com/que-es-un-slider/) en la página principal. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
+* Issue #1: Implementar un slider de imágenes [(Explicación)](https://soyrafaramos.com/que-es-un-slider/) en la página principal. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
 * Issue #2: Agregar un formulario de contacto en la página principal. (Asignado a: [Nombre del desarrollador front-end JavaScript])
 * Issue #3: Diseñar la paleta de colores y la tipografía de la página principal. (Asignado a: [Nombre del diseñador UX/UI])
 
