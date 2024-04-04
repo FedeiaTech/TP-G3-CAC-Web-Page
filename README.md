@@ -20,3 +20,39 @@ En el contexto del desarrollo de software y especialmente en plataformas como Gi
 + Seguimiento del progreso: Permite seguir el progreso del proyecto y ver el estado de cada tarea o error identificado.
 + Colaboración efectiva: Fomenta la colaboración, ya que permite a diferentes miembros del equipo aportar soluciones y discutir las mejores formas de abordar los issues.
 
+## Ejemplo de asignación de issues para un proyecto web de entrenamiento
+
+### Descripción del proyecto:
+
+Este proyecto consiste en la creación de un sitio web de 6 páginas para un servicio de entrenamiento. Las páginas son:
+
+* Index: Página principal con información general del servicio.
+* Plan 1, Plan 2, Plan 3: Páginas con detalles de cada plan de entrenamiento.
+* Quiénes somos: Página con información sobre el equipo y la empresa.
+
+Equipo:
+
+* Líder del proyecto: [Nombre del líder]
+* Desarrollador front-end HTML/CSS: [Nombre del desarrollador]
+* Desarrollador front-end JavaScript: [Nombre del desarrollador]
+* Diseñador UX/UI: [Nombre del diseñador]
+
+Issues:
+
+Index:
+
+* Issue #1: Implementar un slider de imágenes en la página principal. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
+* Issue #2: Agregar un formulario de contacto en la página principal. (Asignado a: [Nombre del desarrollador front-end JavaScript])
+* Issue #3: Diseñar la paleta de colores y la tipografía de la página principal. (Asignado a: [Nombre del diseñador UX/UI])
+
+Plan 1, Plan 2, Plan 3:
+
+* Issue #4: Implementar una tabla comparativa de los planes de entrenamiento. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
+* Issue #5: Agregar un formulario de suscripción a cada plan de entrenamiento. (Asignado a: [Nombre del desarrollador front-end JavaScript])
+* Issue #6: Diseñar la presentación de la información en cada plan de entrenamiento. (Asignado a: [Nombre del diseñador UX/UI])
+
+Quiénes somos:
+
+* Issue #7: Agregar una sección con fotos del equipo. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
+* Issue #8: Implementar una sección con videos testimoniales de clientes. (Asignado a: [Nombre del desarrollador front-end JavaScript])
+* Issue #9: Diseñar la presentación del equipo y la cultura de la empresa. (Asignado a: [Nombre del diseñador UX/UI])
