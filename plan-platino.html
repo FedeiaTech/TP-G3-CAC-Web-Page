@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo4-pag.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Descripcion Plan Platino</title>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <section class="header-info">
+            <p>El mejor momento para cambiar tu vida es ahora. Empieza a crear tus nuevos hábitos HOY mismo! Anímate y
+                contáctanos!</p>
+        </section>
+        <section class="navbar-container">
+            <nav class="navbar contenedor">
+                <!-- logo -->
+                <a href="index.html" class="navbar-logo">
+                    <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="250">
+                    </img>
+                    <!-- Hipervinculos para el menu -->
+                    <div class="navbar-links">
+                        <ul class="navbar-list">
+                            <li class="nav-item"><a href="#"> Inicio</a></li>
+                            <li class="nav-item"><a href="#"> Quienes somos</a></li>
+                            <li class="nav-item"><a href="#">Planes online</a></li>
+                            <li class="nav-item"><a href="#">Contacto</a></li>
+                        </ul>
+                        <form action="" class="navbar-search">
+                            <a href="#" class="search-icon">
+                                <img src="/images/img-lupa2.png" alt="boton de busqueda" height="35">
+                            </a>
+                        </form>
+                        <form action="" class="navbar-carrito"></form>
+                        <a href="#" class="carrito-icon">
+                            <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
+                        </a>
+                        <button class="navbar-toogle-boton">
+                            <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
+                        </button>
+                        <div class="navbar-menu-movil">
+                            <ul class="navbar-list-movil">
+                                <li class="nav-item-movil"><a href="#"> Inicio</a></li>
+                                <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
+                                <li class="nav-item-movil"><a href="#">Planes online</a></li>
+                                <li class="nav-item-movil"><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section id="planes">
+            <div class="planes-seccion">
+                <div class="planes-seccion-container">
+                    <div class="planes-seccion-item">
+                        <figure>
+                            <img src="/images/foto 6.jpg" alt="foto plan platino" height="200">
+                        </figure>
+                        <div class="planes-seccion-info">
+                            <h2 class="planes-seccion-subtitulo">Plan Platino</h2>
+                            <p class="plan-seccion-descripcion">
+                                <ul>
+                                    <li>Programa de 12 semanas</li><br>
+                                    <li>Rutina de Entrenamiento personalizada y dinámica</li><br>
+                                    <li>Adaptada a tus necesidades y nivel de entrenamiento</li><br>
+                                    <li>Rutina de estiramiento</li><br>
+                                    <li>Opción para hacer en casa o gimnasio</li><br>
+                                    <li>Guía de ejercicios por PDF y video</li><br>
+                                    <li>Plan de suplementación deportiva (opcional)</li><br>
+                                    <li>Plan nutricional personalizado con opción vegana/vegetariana</li><br>
+                                    <li>Acceso a la plataforma online y chat con tu coach y nutricionista</li><br>
+                                    <li>Soporte semanal con contacto diario</li><br>
+                                    <li>Revisión del plan cada 15 días</li><br>
+                                    <li>Acceso a chat grupal con otros participantes</li>
+                                </ul>
+                            </p>
+                            <p>Formato de pago con opciones:</p> 
+                            <!-- Aca despues se agrega un cuadradito con form para opciones de pago (tipo transferencia, tarjeta, paypal, etc)-->
+                            <p>$50000</p>
+                            <button class="boton-comprar-planes" onclick="agregarAlCarrito('platino')">LO QUIERO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer-nav-info">
+            <div class="footer-nav-info container">
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Inicio</h3>
+                    <ul class="footer-info-lista-items">
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">¿Quieres trabajar con nosotros?</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">FAQ</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Política de privacidad</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Términos y condiciones</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Aviso Legal</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Quienes somos</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Planes online</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Testimonios</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Contacto</h3>
+                </article>
+
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Síguenos</h3>
+                    <div class="footer-iconos-contenedor">
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-facebook.png" alt="icono de facebook">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-instagram2.png" alt="icono de instagram">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-twitter.png" alt="icono de X-Twitter" height="16">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-youtube.png" alt="icono de youtube">
+                        </a>
+                    </div>
+
+                    <div class="suscribete-contenedor">
+                        <h3 class="footer-titulo">Suscribete al Newsletter</h3>
+                        <form action="" class="suscribete-contenedor-form">
+                            <input type="email" class="suscribete-contenedor-mail input" placeholder="Ingresa tu mail">
+                            <button type="submit" class="boton-suscribete button">Suscribirme</button>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="footer-copyright">
+            <p class="footer-copyright-texto" id="copyright">Copyright © 2024 Fitness 360 - Todos los derechos
+                reservados</p>
+        </section>
+    </footer>
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
