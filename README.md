@@ -1,6 +1,6 @@
 # Trabajo Practico Equipo 3 CAC - Web-Page
 
-##Recursos utiles
+## Recursos utiles
 
 [Tutorial Git y Github](https://fedeiatech.github.io/Git/git.html)
 
