@@ -1,14 +1,14 @@
 # Trabajo Practico Equipo 3 CAC - Web-Page
 
-## Recursos utiles
+## Recursos útiles
 
 [Tutorial Git y Github](https://fedeiatech.github.io/Git/git.html)
 
-## Introduccion a ISSUES (Incidencias)
+## Introducción a ISSUES (Incidencias)
 
 En el contexto del desarrollo de software y especialmente en plataformas como GitHub, los "issues" se pueden traducir como "incidencias" o "problemas". Son una herramienta fundamental para la comunicación y seguimiento de errores, tareas pendientes, mejoras o solicitudes de nuevas funcionalidades en un proyecto.
 
-### Aca les detallo algunas características clave de los issues:
+### Acá les detallo algunas características clave de los issues:
 
 + Registro de problemas: Funcionan como un registro para detallar problemas encontrados en el código, errores de funcionamiento o cualquier desviación del comportamiento esperado.
 + Seguimiento de tareas: Sirven para realizar un seguimiento del avance en tareas pendientes. Se pueden crear issues para tareas de diseño, implementación de funcionalidades o corrección de errores.
