@@ -1,5 +1,9 @@
 # Trabajo Practico Equipo 3 CAC - Web-Page
 
+##Recursos utiles
+
+[Tutorial Git y Github](https://fedeiatech.github.io/Git/git.html)
+
 ## Introduccion a ISSUES (Incidencias)
 
 En el contexto del desarrollo de software y especialmente en plataformas como GitHub, los "issues" se pueden traducir como "incidencias" o "problemas". Son una herramienta fundamental para la comunicación y seguimiento de errores, tareas pendientes, mejoras o solicitudes de nuevas funcionalidades en un proyecto.
