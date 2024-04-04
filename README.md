@@ -4,7 +4,7 @@
 
 En el contexto del desarrollo de software y especialmente en plataformas como GitHub, los "issues" se pueden traducir como "incidencias" o "problemas". Son una herramienta fundamental para la comunicación y seguimiento de errores, tareas pendientes, mejoras o solicitudes de nuevas funcionalidades en un proyecto.
 
-### Aquí te detallo algunas características clave de los issues:
+### Aca les detallo algunas características clave de los issues:
 
 + Registro de problemas: Funcionan como un registro para detallar problemas encontrados en el código, errores de funcionamiento o cualquier desviación del comportamiento esperado.
 + Seguimiento de tareas: Sirven para realizar un seguimiento del avance en tareas pendientes. Se pueden crear issues para tareas de diseño, implementación de funcionalidades o corrección de errores.
@@ -41,7 +41,7 @@ Issues:
 
 Index:
 
-* Issue #1: Implementar un slider de imágenes en la página principal. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
+* Issue #1: Implementar un slider de imágenes [(Explicacion)](https://soyrafaramos.com/que-es-un-slider/) en la página principal. (Asignado a: [Nombre del desarrollador front-end HTML/CSS])
 * Issue #2: Agregar un formulario de contacto en la página principal. (Asignado a: [Nombre del desarrollador front-end JavaScript])
 * Issue #3: Diseñar la paleta de colores y la tipografía de la página principal. (Asignado a: [Nombre del diseñador UX/UI])
 
