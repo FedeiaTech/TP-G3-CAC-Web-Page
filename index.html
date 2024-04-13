@@ -30,31 +30,65 @@
                     <!-- Hipervinculos para el menu -->
                     <div class="navbar-links">
                         <ul class="navbar-list">
-                            <li class="nav-item"><a href="#"> Inicio</a></li>
-                            <li class="nav-item"><a href="#"> Quienes somos</a></li>
-                            <li class="nav-item"><a href="#">Planes online</a></li>
-                            <li class="nav-item"><a href="#">Contacto</a></li>
+                            <li class="nav-item"><a href="index.html"> Inicio</a></li>
+                            <li class="nav-item"><a href="#quienes-somos"> Quienes somos</a></li>
+                            <li class="nav-item"><a href="#planes-online">Planes online</a></li>
+                            <li class="nav-item"><a href="#contacto">Contacto</a></li>
                         </ul>
-                        <form action="" class="navbar-search">
-                            <a href="#" class="search-icon">
-                                <img src="/images/img-lupa2.png" alt="boton de busqueda" height="35">
-                            </a>
-                        </form>
-                        <form action="" class="navbar-carrito"></form>
-                        <a href="#" class="carrito-icon">
-                            <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
-                        </a>
-                        <button class="navbar-toogle-boton">
-                            <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
-                        </button>
-                        <div class="navbar-menu-movil">
-                            <ul class="navbar-list-movil">
-                                <li class="nav-item-movil"><a href="#"> Inicio</a></li>
-                                <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
-                                <li class="nav-item-movil"><a href="#">Planes online</a></li>
-                                <li class="nav-item-movil"><a href="#">Contacto</a></li>
-                            </ul>
+                        <div class="navbar-search">
+                            <input type="text" placeholder="Buscar" required>
+                            <div class="search-icon">
+                                <a href="#" class="boton-search-icon">
+                                    <img src="/images/img-lupa2.png" alt="boton de busqueda">
+                                </a>
+                            </div>
                         </div>
+                        <div class="container-navbar-carrito">
+                            <div class="navbar-carrito-icon">
+                                <button href="#" class="boton-carrito-icon">
+                                    <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
+                                </button>
+
+                                <div class="cantidad-productos">
+                                    <span id="contador-productos">0</span>
+                                </div>
+                            </div>
+                            <div class="container-carrito-productos hidden-cart">
+                                <div class="carga-producto hidden">
+                                    <div class="carrito-producto">
+                                        <div class="info-carrito-producto">
+                                            <span class="cantidad-producto-carrito"></span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito hidden">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar"></span>
+                                    <button class="comprar-carrito">Comprar carrito</button>
+                                </div>
+                                <p class="carrito-vacio">El carrito está vacío</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toogle-boton">
+                        <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
+                    </button>
+                    <div class="navbar-menu-movil">
+                        <ul class="navbar-list-movil">
+                            <li class="nav-item-movil"><a href="#"> Inicio</a></li>
+                            <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
+                            <li class="nav-item-movil"><a href="#">Planes online</a></li>
+                            <li class="nav-item-movil"><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
                     </div>
             </nav>
         </section>
@@ -62,7 +96,7 @@
 
     <!-- Contenido -->
     <main>
-        <section class="quienes-somos-seccion">
+        <section id="quienes-somos" class="quienes-somos-seccion">
             <!-- Descripción de quienes somos-->
             <!-- Aca iría alguna foto o imagen o fondo acompañando al texto(ideas?)-->
             <div class="quienes-somos-container">
@@ -150,7 +184,7 @@
             </article>
         </section>
         <section id="planes">
-            <div class="planes-seccion">
+            <div id="planes-online" class="planes-seccion">
                 <div class="planes-seccion-titulo">
                     <h1>Elige tu plan</h1>
                 </div>
@@ -248,7 +282,9 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">Paula</h2>
                             <p class="descripcion-testimonio">
-                                "Fitness 360 ha transformado mi vida. No puedo creer lo mucho que he cambiado desde que comencé a utilizar sus servicios. Me siento más fuerte, más saludable y más feliz que nunca"    
+                                "Fitness 360 ha transformado mi vida. No puedo creer lo mucho que he cambiado desde que
+                                comencé a utilizar sus servicios. Me siento más fuerte, más saludable y más feliz que
+                                nunca"
                             </p>
                         </div>
                     </div>
@@ -265,7 +301,9 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">Daniela</h2>
                             <p class="descripcion-testimonio">
-                                "Gracias a Fitness 360, finalmente he logrado adoptar un estilo de vida activo y saludable. Nunca pensé que podría disfrutar tanto del ejercicio y la buena alimentación. ¡Estoy agradecida por esta increíble transformación!"   
+                                "Gracias a Fitness 360, finalmente he logrado adoptar un estilo de vida activo y
+                                saludable. Nunca pensé que podría disfrutar tanto del ejercicio y la buena alimentación.
+                                ¡Estoy agradecida por esta increíble transformación!"
                             </p>
                         </div>
                     </div>
@@ -282,7 +320,9 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">Alicia</h2>
                             <p class="descripcion-testimonio">
-                                "Estoy tan agradecida de haber encontrado Fitness 360. Su equipo profesional y amable me ha ayudado a adoptar hábitos saludables que han transformado mi vida. ¡No puedo esperar para ver qué más puedo lograr con su ayuda!"     
+                                "Estoy tan agradecida de haber encontrado Fitness 360. Su equipo profesional y amable me
+                                ha ayudado a adoptar hábitos saludables que han transformado mi vida. ¡No puedo esperar
+                                para ver qué más puedo lograr con su ayuda!"
                             </p>
                         </div>
                     </div>
@@ -299,7 +339,9 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">María</h2>
                             <p class="descripcion-testimonio">
-                                "Mis amigos y familiares no pueden creer lo mucho que he cambiado desde que empecé a trabajar con uds. Me siento más enérgica, más feliz y más segura de mí misma. ¡Recomiendo 100% sus servicios!"     
+                                "Mis amigos y familiares no pueden creer lo mucho que he cambiado desde que empecé a
+                                trabajar con uds. Me siento más enérgica, más feliz y más segura de mí misma.
+                                ¡Recomiendo 100% sus servicios!"
                             </p>
                         </div>
                     </div>
@@ -316,7 +358,9 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">Caroline</h2>
                             <p class="descripcion-testimonio">
-                                Gracias al equipo de Fitness 360 he encontrado el equilibrio entre el trabajo, el ejercicio y el tiempo para mí. Me siento más saludable, más fuerte y más centrada en mis objetivos. ¡Gracias por ayudarme a convertirme en la mejor versión de mí misma!"     
+                                "Gracias al equipo de Fitness 360 he encontrado el equilibrio entre el trabajo, el
+                                ejercicio y el tiempo para mí. Me siento más saludable, más fuerte y más centrada en mis
+                                objetivos. ¡Gracias por ayudarme a convertirme en la mejor versión de mí misma!"
                             </p>
                         </div>
                     </div>
@@ -334,7 +378,7 @@
     </main>
 
     <footer class="footer">
-        <section class="footer-nav-info">
+        <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
                     <h3 class="footer-titulo">Inicio</h3>
