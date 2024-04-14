@@ -100,3 +100,34 @@ document.addEventListener("DOMContentLoaded", () =>{
     let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento,8000)
 
 });
+
+//-------------------------------------------------
+// Uso de modals
+const modales = document.querySelectorAll('.modal');
+const botonesCerrar = document.querySelectorAll('.modal button');
+const enlaces = document.querySelectorAll('a[data-modal]');
+
+function abrirModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.add('modal-activo');
+}
+
+function cerrarModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.remove('modal-activo');
+}
+
+enlaces.forEach(enlace => {
+  enlace.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalId = e.target.dataset.modal;
+    abrirModal(modalId);
+  });
+});
+
+botonesCerrar.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const modalId = boton.parentNode.parentNode.id;
+    cerrarModal(modalId);
+  });
+});
