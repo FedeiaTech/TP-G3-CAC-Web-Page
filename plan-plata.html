@@ -24,34 +24,67 @@
             <nav class="navbar contenedor">
                 <!-- logo -->
                 <a href="index.html" class="navbar-logo">
-                    <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="250">
-                    </img>
+                    <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300"></img>
                     <!-- Hipervinculos para el menu -->
                     <div class="navbar-links">
                         <ul class="navbar-list">
                             <li class="nav-item"><a href="#"> Inicio</a></li>
                             <li class="nav-item"><a href="#"> Quienes somos</a></li>
-                            <li class="nav-item"><a href="#">Planes online</a></li>
+                            <li class="nav-item"><a href="#planes-online">Planes online</a></li>
                             <li class="nav-item"><a href="#">Contacto</a></li>
                         </ul>
-                        <form action="" class="navbar-search">
-                            <a href="#" class="search-icon">
-                                <img src="/images/img-lupa2.png" alt="boton de busqueda" height="35">
-                            </a>
-                        </form>
-                        <form action="" class="navbar-carrito"></form>
-                        <a href="#" class="carrito-icon">
-                            <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
-                        </a>
+                        <div class="navbar-search">
+                            <input type="text" placeholder="Buscar" required>
+                            <div class="search-icon">
+                                <a href="#" class="boton-search-icon">
+                                    <img src="/images/img-lupa2.png" alt="boton de busqueda">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="container-navbar-carrito">
+                            <div class="navbar-carrito-icon">
+                                <button href="#" class="boton-carrito-icon">
+                                    <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
+                                </button>
+                
+                                <div class="cantidad-productos">
+                                    <span id="contador-productos">0</span>
+                                </div>
+                            </div>    
+                            <div class="container-carrito-productos hidden-cart">
+                                <div class="carga-producto hidden">
+                                    <div class="carrito-producto">
+                                        <div class="info-carrito-producto">
+                                            <span class="cantidad-producto-carrito"></span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito hidden">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar"></span>
+                                    <button class="comprar-carrito">Comprar carrito</button>
+                                </div>
+                                <p class="carrito-vacio">El carrito está vacío</p>
+                            </div>
+                        </div>
+                    </div>
                         <button class="navbar-toogle-boton">
                             <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
                         </button>
                         <div class="navbar-menu-movil">
                             <ul class="navbar-list-movil">
-                                <li class="nav-item-movil"><a href="#"> Inicio</a></li>
-                                <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
+                                <li class="nav-item-movil"><a href="index.html"> Inicio</a></li>
+                                <li class="nav-item-movil"><a href="#quienes-somos"> Quienes somos</a></li>
                                 <li class="nav-item-movil"><a href="#">Planes online</a></li>
-                                <li class="nav-item-movil"><a href="#">Contacto</a></li>
+                                <li class="nav-item-movil"><a href="#contacto">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,8 +115,8 @@
                             </p>
                             <p>Formato de pago con opciones:</p> 
                             <!-- Aca despues se agrega un cuadradito con form para opciones de pago(tipo transferencia, tarjeta, paypal, etc)-->
-                            <p>$30000</p>
-                            <button class="boton-comprar-planes" onclick="agregarAlCarrito('plata')">LO QUIERO</button>
+                            <p class="precio"><strong>$30000</strong></p>
+                            <button class="boton-comprar-planes">LO QUIERO</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +125,7 @@
     </main>
 
     <footer class="footer">
-        <section class="footer-nav-info">
+        <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
                     <h3 class="footer-titulo">Inicio</h3>
