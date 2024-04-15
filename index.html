@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <title>Fitness 360 - Planes de Entrenamiento Online </title>
+    <title>Fitness 360 - Planes de Entrenamiento Online</title>
 </head>
 
 <body>
@@ -31,31 +31,65 @@
                     <!-- Hipervinculos para el menu -->
                     <div class="navbar-links">
                         <ul class="navbar-list">
-                            <li class="nav-item"><a href="#"> Inicio</a></li>
-                            <li class="nav-item"><a href="#"> Quienes somos</a></li>
-                            <li class="nav-item"><a href="#">Planes online</a></li>
-                            <li class="nav-item"><a href="#">Contacto</a></li>
+                            <li class="nav-item"><a href="index.html"> Inicio</a></li>
+                            <li class="nav-item"><a href="#quienes-somos"> Quienes somos</a></li>
+                            <li class="nav-item"><a href="#planes-online">Planes online</a></li>
+                            <li class="nav-item"><a href="#contacto">Contacto</a></li>
                         </ul>
-                        <form action="" class="navbar-search">
-                            <a href="#" class="search-icon">
-                                <img src="/images/img-lupa2.png" alt="boton de busqueda" height="35">
-                            </a>
-                        </form>
-                        <form action="" class="navbar-carrito"></form>
-                        <a href="#" class="carrito-icon">
-                            <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
-                        </a>
-                        <button class="navbar-toogle-boton">
-                            <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
-                        </button>
-                        <div class="navbar-menu-movil">
-                            <ul class="navbar-list-movil">
-                                <li class="nav-item-movil"><a href="#"> Inicio</a></li>
-                                <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
-                                <li class="nav-item-movil"><a href="#">Planes online</a></li>
-                                <li class="nav-item-movil"><a href="#">Contacto</a></li>
-                            </ul>
+                        <div class="navbar-search">
+                            <input type="text" placeholder="Buscar" required>
+                            <div class="search-icon">
+                                <a href="#" class="boton-search-icon">
+                                    <img src="/images/img-lupa2.png" alt="boton de busqueda">
+                                </a>
+                            </div>
                         </div>
+                        <div class="container-navbar-carrito">
+                            <div class="navbar-carrito-icon">
+                                <button href="#" class="boton-carrito-icon">
+                                    <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
+                                </button>
+
+                                <div class="cantidad-productos">
+                                    <span id="contador-productos">0</span>
+                                </div>
+                            </div>
+                            <div class="container-carrito-productos hidden-cart">
+                                <div class="carga-producto hidden">
+                                    <div class="carrito-producto">
+                                        <div class="info-carrito-producto">
+                                            <span class="cantidad-producto-carrito"></span>
+                                            <p class="titulo-producto-carrito"></p>
+                                            <span class="precio-producto-carrito"></span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="total-carrito hidden">
+                                    <h3>Total:</h3>
+                                    <span class="total-pagar"></span>
+                                    <button class="comprar-carrito">Comprar carrito</button>
+                                </div>
+                                <p class="carrito-vacio">El carrito está vacío</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toogle-boton">
+                        <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
+                    </button>
+                    <div class="navbar-menu-movil">
+                        <ul class="navbar-list-movil">
+                            <li class="nav-item-movil"><a href="#"> Inicio</a></li>
+                            <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
+                            <li class="nav-item-movil"><a href="#">Planes online</a></li>
+                            <li class="nav-item-movil"><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
                     </div>
             </nav>
         </section>
@@ -63,7 +97,7 @@
 
     <!-- Contenido -->
     <main>
-        <section class="quienes-somos-seccion">
+        <section id="quienes-somos" class="quienes-somos-seccion">
             <!-- Descripción de quienes somos-->
             <!-- Aca iría alguna foto o imagen o fondo acompañando al texto(ideas?)-->
             <div class="quienes-somos-container">
@@ -151,7 +185,7 @@
             </article>
         </section>
         <section id="planes">
-            <div class="planes-seccion">
+            <div id="planes-online" class="planes-seccion">
                 <div class="planes-seccion-titulo">
                     <h1>Elige tu plan</h1>
                 </div>
@@ -325,7 +359,7 @@
                         <div class="contenido-testimonio">
                             <h2 class="nombre-testimonio">Caroline</h2>
                             <p class="descripcion-testimonio">
-                                Gracias al equipo de Fitness 360 he encontrado el equilibrio entre el trabajo, el
+                                "Gracias al equipo de Fitness 360 he encontrado el equilibrio entre el trabajo, el
                                 ejercicio y el tiempo para mí. Me siento más saludable, más fuerte y más centrada en mis
                                 objetivos. ¡Gracias por ayudarme a convertirme en la mejor versión de mí misma!"
                             </p>
@@ -345,27 +379,70 @@
     </main>
 
     <footer class="footer">
-        <section class="footer-nav-info">
+        <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
                     <h3 class="footer-titulo">Inicio</h3>
                     <ul class="footer-info-lista-items">
                         <li class="footer-info-items-li">
-                            <a href="#" class="footer-items-link" id="hiper1" data-modal="modal1">¿Quieres trabajar con nosotros?</a>
+                            <a href="#" class="footer-items-link">¿Quieres trabajar con nosotros?</a>
                         </li>
                         <li class="footer-info-items-li">
-                            <a href="#" class="footer-items-link" id="hiper2" data-modal="modal2">FAQ</a>
+                            <a href="#" class="footer-items-link">FAQ</a>
                         </li>
                         <li class="footer-info-items-li">
-                            <a href="#" class="footer-items-link" id="hiper3" data-modal="modal3">Política de privacidad</a>
+                            <a href="#" class="footer-items-link">Política de privacidad</a>
                         </li>
                         <li class="footer-info-items-li">
-                            <a href="#" class="footer-items-link" id="hiper4" data-modal="modal4">Términos y condiciones</a>
+                            <a href="#" class="footer-items-link">Términos y condiciones</a>
                         </li>
                         <li class="footer-info-items-li">
-                            <a href="#" class="footer-items-link" id="hiper5" data-modal="modal5">Aviso Legal</a>
+                            <a href="#" class="footer-items-link">Aviso Legal</a>
                         </li>
                     </ul>
+                    
+                    <!------------ Contenido de modals ------------>
+                    <div id="modal1" class="modal">
+                        <div class="modal-contenido">
+                            <h2>Trabaja con nosotros</h2>
+                            <p>Aquí puedes agregar texto detallado sobre el Tema 1.</p>
+                            <button id="cerrarModal1">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div id="modal2" class="modal">
+                        <div class="modal-contenido">
+                            <h2>FAQ</h2>
+                            <p>Tienes alguna pregunta?</p>
+                            <button id="cerrarModal2">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div id="modal3" class="modal">
+                        <div class="modal-contenido">
+                            <h2>Politica de privacidad</h2>
+                            <p>Aquí puedes agregar texto detallado sobre el Tema 3.</p>
+                            <button id="cerrarModal3">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div id="modal4" class="modal">
+                        <div class="modal-contenido">
+                            <h2>Terminos y condiciones</h2>
+                            <p>Aquí puedes agregar texto detallado sobre el Tema 4.</p>
+                            <button id="cerrarModal4">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div id="modal5" class="modal">
+                        <div class="modal-contenido">
+                            <h2>Aviso legal</h2>
+                            <p>Aquí puedes agregar texto detallado sobre el Tema 5.</p>
+                            <button id="cerrarModal5">Cerrar</button>
+                        </div>
+                    </div>
+                    <!-- ------------------- -->
+
                 </article>
                 <article class="footer-info-lista">
                     <h3 class="footer-titulo">Quienes somos</h3>
@@ -406,48 +483,6 @@
                     </div>
                 </article>
             </div>
-
-            <!------------ Contenido de modals ------------>
-            <div id="modal1" class="modal">
-                <div class="modal-contenido">
-                  <h2>Trabaja con nosotros</h2>
-                  <p>Aquí puedes agregar texto detallado sobre el Tema 1.</p>
-                  <button id="cerrarModal1">Cerrar</button>
-                </div>
-              </div>
-            
-              <div id="modal2" class="modal">
-                <div class="modal-contenido">
-                  <h2>FAQ</h2>
-                  <p>Tienes alguna pregunta?</p>
-                  <button id="cerrarModal2">Cerrar</button>
-                </div>
-              </div>
-            
-              <div id="modal3" class="modal">
-                <div class="modal-contenido">
-                  <h2>Politica de privacidad</h2>
-                  <p>Aquí puedes agregar texto detallado sobre el Tema 3.</p>
-                  <button id="cerrarModal3">Cerrar</button>
-                </div>
-              </div>
-            
-              <div id="modal4" class="modal">
-                <div class="modal-contenido">
-                  <h2>Terminos y condiciones</h2>
-                  <p>Aquí puedes agregar texto detallado sobre el Tema 4.</p>
-                  <button id="cerrarModal4">Cerrar</button>
-                </div>
-              </div>
-            
-              <div id="modal5" class="modal">
-                <div class="modal-contenido">
-                  <h2>Aviso legal</h2>
-                  <p>Aquí puedes agregar texto detallado sobre el Tema 5.</p>
-                  <button id="cerrarModal5">Cerrar</button>
-                </div>
-              </div>
-            <!-- ------------------- -->
         </section>
         <section class="footer-copyright">
             <p class="footer-copyright-texto" id="copyright">Copyright © 2024 Fitness 360 - Todos los derechos
