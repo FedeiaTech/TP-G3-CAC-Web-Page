@@ -45,21 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarFoto(fotoActualIndice);
     }
 
-    botonProximo.addEventListener("click", (event) => {
+    botonProximo.addEventListener("click", (event) => {  //para cambiar a foto siguiente en carrousel
         event.preventDefault();
         cambiarFoto(1);
     })
 
-    botonPrevio.addEventListener("click", (event) => {
+    botonPrevio.addEventListener("click", (event) => {  // para cambiar a foto anterior en carrousel
         event.preventDefault();
         cambiarFoto(-1);
     })
 
-    const autoDesplazamiento = () => {
+    const autoDesplazamiento = () => {       // para que las fotos se deslicen automaticamente
         cambiarFoto(1, "carrousel-control-proximo");
     }
 
-    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000)
+    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000)  // intervalo de tiempo que dura la foto a la vista
 });
 
 /* Funcionalidad Slide Testimonios */
@@ -83,21 +83,21 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarTestimonio(TestimonioActualIndice);
     }
 
-    botonProximo.addEventListener("click", (event) => {
-        event.preventDefault();
+    botonProximo.addEventListener("click", (event) => {   // para cambiar a testimonio siguiente
+        event.preventDefault();  
         cambiarTestimonio(1);
     })
 
-    botonPrevio.addEventListener("click", (event) => {
+    botonPrevio.addEventListener("click", (event) => {  // para volver a testimonio anterior
         event.preventDefault();
         cambiarTestimonio(-1);
     })
 
-    const autoDesplazamiento = () => {
+    const autoDesplazamiento = () => {     // para que los testimonios se deslicen automaticamente
         cambiarTestimonio(1, "testimonios-control-proximo");
     }
 
-    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 8000)
+    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 8000)   // intervalo de tiempo que dura el testimonio a la vista
 
 });
 
@@ -116,7 +116,7 @@ const botonCancelar = document.querySelector(".icono-cancela-compra");
 
 const listaPlanes = document.querySelector(".planes-seccion-container"); //lista de todos los containers de planes
 
-let productosTotales = []; // variable con array que incluye el total de productos que se agregan al carrito
+let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
 const valorTotalCarrito = document.querySelector(".total-pagar");
 
@@ -127,17 +127,13 @@ const carritoVacio = document.querySelector(".carrito-vacio");
 const totalProductosCarrito = document.querySelector(".total-carrito");
 
 
-botonCarrito.addEventListener("click", () => {
+botonCarrito.addEventListener("click", () => {                // para abrir o esconder el contenido del carrito
     contenedorProductosCarrito.classList.toggle("hidden-cart");
 });
 
-//  botonCancelar.addEventListener("click", () => {
-//     contenedorProductosCarrito.classList.remove(".total-carrito");
-// });
-
 
 listaPlanes.addEventListener("click", event => {
-    if (event.target.classList.contains("boton-comprar-planes")) {
+    if (event.target.classList.contains("boton-comprar-planes")) {   // al hacer click en el plan que se desea comprar, se agrega al carrito
         const plan = event.target.parentElement;
 
         const informacionPlan = {
@@ -169,7 +165,7 @@ listaPlanes.addEventListener("click", event => {
 });
 
 agregarProducto.addEventListener("click", event => {
-    if (event.target.classList.contains("icono-cancela-compra")) {
+    if (event.target.classList.contains("icono-cancela-compra")) {    //para que al apretar la cruz se borren los elementos del carrito
         const producto = event.currentTarget.parentElement;
         const titulo = producto.querySelector(".titulo-producto-carrito").textContent.trim(); //con el "trim" eliminamos espacios en blanco que haya quedado alrededor del titulo, daba error antes y con esto se solucionó
 
@@ -197,7 +193,7 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
     }
 
 
-    agregarProducto.innerHTML = ""; //limpiar carrito para que quede vacío
+    agregarProducto.innerHTML = ""; //limpiar carrito para que quede vacío al querer realizar nueva compra
 
     let precioTotal = 0;
     let totalDePlanesAgregados = 0;
@@ -227,6 +223,7 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
         valorTotalCarrito.innerText = ` $${precioTotal} `;
         contarProductos.innerText = totalDePlanesAgregados;
 };    
+
 
 // lo unico que pasa es que al cambiar de página el carrito se vacía automaticamente. Me fije como hacer pero creo que para eso ya hay que usar Back end, porque hay que almacenarlo en un storage con archivo json, etc. Asi que por ahora lo dejo asi.
 
