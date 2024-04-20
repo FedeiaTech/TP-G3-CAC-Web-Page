@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     botonProximo.addEventListener("click", (event) => {   // para cambiar a testimonio siguiente
-        event.preventDefault();  
+        event.preventDefault();
         cambiarTestimonio(1);
     })
 
@@ -182,7 +182,7 @@ agregarProducto.addEventListener("click", event => {
 
 const mostrarCarrito = () => {    // para crear el carrito y que todos esos productos se vean dentro de él
 
-    if(!productosTotales.length){
+    if (!productosTotales.length) {
         carritoVacio.classList.remove("hidden");
         agregarProducto.classList.add("hidden");
         totalProductosCarrito.classList.add("hidden");
@@ -214,15 +214,15 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
         </svg>
         `; // insertamos la estructura HTML del contenido del carrito 
 
-            agregarProducto.append(contenedorProductos); //para ir añadiendo los productos al carrito
+        agregarProducto.append(contenedorProductos); //para ir añadiendo los productos al carrito
 
-            precioTotal = precioTotal + parseInt(plan.cantidad * plan.precio.slice(1)); //"Parseint" para convertirlo a entero, porque era un string y "slice" para sacar el simbolo "pesos". Multiplicamos el valor de cada plan por cada plan agregado asi nos da el total
-            totalDePlanesAgregados = totalDePlanesAgregados + plan.cantidad;
-        });
+        precioTotal = precioTotal + parseInt(plan.cantidad * plan.precio.slice(1)); //"Parseint" para convertirlo a entero, porque era un string y "slice" para sacar el simbolo "pesos". Multiplicamos el valor de cada plan por cada plan agregado asi nos da el total
+        totalDePlanesAgregados = totalDePlanesAgregados + plan.cantidad;
+    });
 
-        valorTotalCarrito.innerText = ` $${precioTotal} `;
-        contarProductos.innerText = totalDePlanesAgregados;
-};    
+    valorTotalCarrito.innerText = ` $${precioTotal} `;
+    contarProductos.innerText = totalDePlanesAgregados;
+};
 
 //-------------------------------------------------
 // Uso de modals
@@ -231,28 +231,28 @@ const botonesCerrar = document.querySelectorAll('.modal button');
 const enlaces = document.querySelectorAll('a[data-modal]');
 
 function abrirModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.add('modal-activo');
+    const modal = document.getElementById(modalId);
+    modal.classList.add('modal-activo');
 }
 
 function cerrarModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.remove('modal-activo');
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('modal-activo');
 }
 
 enlaces.forEach(enlace => {
-  enlace.addEventListener('click', (e) => {
-    e.preventDefault();
-    const modalId = e.target.dataset.modal;
-    abrirModal(modalId);
-  });
+    enlace.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = e.target.dataset.modal;
+        abrirModal(modalId);
+    });
 });
 
 botonesCerrar.forEach(boton => {
-  boton.addEventListener('click', () => {
-    const modalId = boton.parentNode.parentNode.id;
-    cerrarModal(modalId);
-  });
+    boton.addEventListener('click', () => {
+        const modalId = boton.parentNode.parentNode.id;
+        cerrarModal(modalId);
+    });
 });
 
 
@@ -261,4 +261,3 @@ botonesCerrar.forEach(boton => {
 // También faltaría que cuando se clickea en comprar carrito nos lleve a algun lado tipo: opciones de pago : tarjeta, pay pal, transferencia, etc, eso falta
 
 // hice el estilo de la lupa y buscador con css y hover pero no se si quieren darle funcionalidad, o sea que busque palabras dentro de nuestra página. Eso faltaría hacer
-
