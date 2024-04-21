@@ -227,32 +227,32 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
 //-------------------------------------------------
 // Uso de modals
 const modales = document.querySelectorAll('.modal');
-const botonesCerrar = document.querySelectorAll('.modal button');
-const enlaces = document.querySelectorAll('a[data-modal]');
+const botonesCerrar = document.querySelectorAll('.cerrar-modal');
+const enlaces = document.querySelectorAll('.footer-items-link');
 
-function abrirModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.add('modal-activo');
+function abrirModal(enlace) {
+  const modalClass = enlace.dataset.modalClass;
+  const modal = document.querySelector(`.modal.${modalClass}`);
+  modal.classList.add('modal-activo');
 }
 
-function cerrarModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.remove('modal-activo');
+function cerrarModal(boton) {
+  const modalClass = boton.dataset.modalClass;
+  const modal = document.querySelector(`.modal.${modalClass}`);
+  modal.classList.remove('modal-activo');
 }
 
 enlaces.forEach(enlace => {
-    enlace.addEventListener('click', (e) => {
-        e.preventDefault();
-        const modalId = e.target.dataset.modal;
-        abrirModal(modalId);
-    });
+  enlace.addEventListener('click', (e) => {
+    e.preventDefault();
+    abrirModal(enlace);
+  });
 });
 
 botonesCerrar.forEach(boton => {
-    boton.addEventListener('click', () => {
-        const modalId = boton.parentNode.parentNode.id;
-        cerrarModal(modalId);
-    });
+  boton.addEventListener('click', () => {
+    cerrarModal(boton);
+  });
 });
 
 
