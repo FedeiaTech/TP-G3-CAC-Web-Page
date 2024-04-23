@@ -6,3 +6,14 @@
 p{
     line-height: 20px;
 }
+
+#work{
+    text-align: center;
+    align-items: center;
+    margin: 50px;    
+}
+
+.centrar {
+    text-align: center;
+    align-items: center;
+}

@@ -666,6 +666,8 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     border-radius: 15px;
     cursor: pointer;
     width: 200px;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .planes-seccion-info button:hover {
@@ -682,7 +684,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     transform: scale(1.1);
 }
 
-/*Falta terminar toda la parte de estilos, media query y JS de la parte de compra de planes, o sea una vez que apretamos "Saber mas" y nos lleva a otro lado, ahi en esa pagina falta todo eso*/
+/*Falta terminar toda la parte media query de la parte de compra de planes */
 /* Estilos Compra Planes */
 
 .planes-seccion-compra-container {
@@ -767,6 +769,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     border-radius: 15px;
     cursor: pointer;
     width: 200px;
+    font-size: 18px;
 }
 
 .planes-seccion-compra-info button:hover {
@@ -1114,11 +1117,8 @@ input {
 }
 
 
-/*Falta hacer el CSS, JS y Media Query de la parte de la compra de los planes*/
-/*Falta ver la parte de Media Query casi todas las secciones, sobre todo la parte de planes y testimonios*/
+/*Falta hacer Media Query de la parte de los planes del index y de la parte de compra de los planes*/
+/*Falta ver la parte de Media Query casi todas las secciones, sobre todo la parte de planes y testimonios. 3 puntos de corte*/
 /* Falta darle utilidad a la lupita de busqueda, o sea que busque cosas, el estilo ya lo tiene */
-/* Falta agregar las rutas y anclas de cada boton */
 /*En la seccion compra habria que hacer un form para poner para que se elija por ej: pago con tarjeta, pago con transferencia, pago con Pay pal, etc*/
 /*Faltaria ver si quieren agregar algo en la parte de quienes somos, alguna imagen o algun fondo distinto, no se algo asi  y ver la responsividad */
-
-/*Faltaría ver si quieren agregar alguna otra seccion que se les ocurra o si quieren cambiar algo de lo que está */

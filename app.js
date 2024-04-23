@@ -114,7 +114,7 @@ const agregarProducto = document.querySelector(".carga-producto");
 
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
-const listaPlanes = document.querySelector(".planes-seccion-container"); //lista de todos los containers de planes
+const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -226,33 +226,33 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
 
 //-------------------------------------------------
 // Uso de modals
-const modales = document.querySelectorAll('.modal');
-const botonesCerrar = document.querySelectorAll('.cerrar-modal');
-const enlaces = document.querySelectorAll('.footer-items-link');
+const modales = document.querySelectorAll(".modal");
+const botonesCerrar = document.querySelectorAll(".cerrar-modal");
+const enlaces = document.querySelectorAll(".footer-items-link");
 
 function abrirModal(enlace) {
-  const modalClass = enlace.dataset.modalClass;
-  const modal = document.querySelector(`.modal.${modalClass}`);
-  modal.classList.add('modal-activo');
+    const modalClass = enlace.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.add("modal-activo");
 }
 
 function cerrarModal(boton) {
-  const modalClass = boton.dataset.modalClass;
-  const modal = document.querySelector(`.modal.${modalClass}`);
-  modal.classList.remove('modal-activo');
+    const modalClass = boton.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.remove("modal-activo");
 }
 
 enlaces.forEach(enlace => {
-  enlace.addEventListener('click', (e) => {
-    e.preventDefault();
-    abrirModal(enlace);
-  });
+    enlace.addEventListener("click", (e) => {
+        e.preventDefault();
+        abrirModal(enlace);
+    });
 });
 
 botonesCerrar.forEach(boton => {
-  boton.addEventListener('click', () => {
-    cerrarModal(boton);
-  });
+    boton.addEventListener("click", () => {
+        cerrarModal(boton);
+    });
 });
 
 
