@@ -1,4 +1,4 @@
-/*Funcionalidad NavBar*/
+/* Funcionalidad NavBar */
 
 document.addEventListener("DOMContentLoaded", () => {
     //Seleccionamos elementos del DOM
@@ -62,6 +62,61 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000)  // intervalo de tiempo que dura la foto a la vista
 });
 
+/*Barra de progreso del carrusel*/
+document.addEventListener("DOMContentLoaded", () => {
+    const fotosCarrousel = document.querySelectorAll(".carrousel-seccion-slide");
+    const botonPrevio = document.querySelector(".carrousel-control-previa");
+    const botonProximo = document.querySelector(".carrousel-control-proximo");
+    const barraProgreso = document.querySelector(".barra-progreso");
+
+    let fotoActualIndice = 0;
+    let autoDesplazamientoIntervalo;
+
+    const mostrarFoto = (index) => {
+        fotosCarrousel.forEach(fotos => fotos.classList.remove("contenido"));
+        fotosCarrousel[index].classList.add("contenido");
+        actualizarBarraProgreso(index);
+    }
+
+    const cambiarFoto = (increment) => {
+        fotoActualIndice = (fotoActualIndice + increment + fotosCarrousel.length) % fotosCarrousel.length;
+        mostrarFoto(fotoActualIndice);
+    }
+
+    const autoDesplazamiento = () => {
+        cambiarFoto(1);
+    }
+
+    const iniciarAutoDesplazamiento = () => {
+        autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000);
+    }
+
+    const detenerAutoDesplazamiento = () => {
+        clearInterval(autoDesplazamientoIntervalo);
+    }
+
+    const actualizarBarraProgreso = (index) => {
+        const progreso = ((index + 1) / fotosCarrousel.length) * 100;
+        barraProgreso.style.width = `${progreso}%`;
+    }
+
+    botonProximo.addEventListener("click", (event) => {
+        event.preventDefault();
+        detenerAutoDesplazamiento();
+        cambiarFoto(1);
+        iniciarAutoDesplazamiento();
+    })
+
+    botonPrevio.addEventListener("click", (event) => {
+        event.preventDefault();
+        detenerAutoDesplazamiento();
+        cambiarFoto(-1);
+        iniciarAutoDesplazamiento();
+    })
+
+    iniciarAutoDesplazamiento();
+});
+
 /* Funcionalidad Slide Testimonios */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -114,7 +169,11 @@ const agregarProducto = document.querySelector(".carga-producto");
 
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
-const listaPlanes = document.querySelector(".planes-seccion-container"); //lista de todos los containers de planes
+const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes. Si usamos esta constante los modals en index NO andan
+
+/* Pruebas distintas para tratar de arreglar el error en modals */
+//const listaPlanes = document.querySelector(".compra-planes"); 
+// const listaPlanes = document.querySelector(".planes-seccion-container"); Si usamos esta constante el modals anda bien en el index
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -226,38 +285,38 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
 
 //-------------------------------------------------
 // Uso de modals
-const modales = document.querySelectorAll('.modal');
-const botonesCerrar = document.querySelectorAll('.cerrar-modal');
+// Selector para los enlaces que abren los modals
 const enlaces = document.querySelectorAll('.footer-items-link');
 
+// Función para abrir el modal correspondiente al enlace clickeado
 function abrirModal(enlace) {
-  const modalClass = enlace.dataset.modalClass;
-  const modal = document.querySelector(`.modal.${modalClass}`);
-  modal.classList.add('modal-activo');
+    const modalClass = enlace.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.add('modal-activo');
 }
 
+// Función para cerrar el modal correspondiente al botón clickeado
 function cerrarModal(boton) {
-  const modalClass = boton.dataset.modalClass;
-  const modal = document.querySelector(`.modal.${modalClass}`);
-  modal.classList.remove('modal-activo');
+    const modalClass = boton.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.remove('modal-activo');
 }
 
+// Event listeners para los enlaces que abren los modals
 enlaces.forEach(enlace => {
-  enlace.addEventListener('click', (e) => {
-    e.preventDefault();
-    abrirModal(enlace);
-  });
+    enlace.addEventListener('click', (e) => {
+        e.preventDefault();
+        abrirModal(enlace);
+    });
 });
 
+// Event listeners para los botones que cierran los modals
+const botonesCerrar = document.querySelectorAll('.cerrar-modal');
 botonesCerrar.forEach(boton => {
-  boton.addEventListener('click', () => {
-    cerrarModal(boton);
-  });
+    boton.addEventListener('click', () => {
+        cerrarModal(boton);
+    });
 });
 
+//---------------------------------------------------
 
-// lo unico que pasa es que al cambiar de página el carrito se vacía automaticamente. Me fije como hacer pero creo que para eso ya hay que usar Back end, porque hay que almacenarlo en un storage con archivo json, etc. Asi que por ahora lo dejo asi.
-
-// También faltaría que cuando se clickea en comprar carrito nos lleve a algun lado tipo: opciones de pago : tarjeta, pay pal, transferencia, etc, eso falta
-
-// hice el estilo de la lupa y buscador con css y hover pero no se si quieren darle funcionalidad, o sea que busque palabras dentro de nuestra página. Eso faltaría hacer
