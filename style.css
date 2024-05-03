@@ -24,7 +24,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-/* Esto evitara que el css afecte a los div denominados con esta clase*/
+/* Esto evitara que el css afecte a los div denominados con este id*/
 #no-afectar-css{
     all: initial; 
 }
