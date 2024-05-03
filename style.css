@@ -25,7 +25,7 @@ body {
 }
 
 /* Esto evitara que el css afecte a los div denominados con esta clase*/
-.no-afectar-css{
+#no-afectar-css{
     all: initial; 
 }
 
