@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="formulario" method="post">
+        <p>
+          <label for="nombre">Nombre: </label>
+          <input id="nombre" name="nombre" type="text" />
+        </p>
+        <p>
+          <label for="text">Email: </label>
+          <input id="email" name="email" type="text" />
+        </p>
+        <p>
+            <p>
+                <select name="turno" id="turno">
+                  <option value="default">Seleccione un turno</option>
+                  <option value="op1">Manaña</option>
+                  <option value="op2">Tarde</option>
+                  <option value="op3">Noche</option>
+                  
+                </select>
+          
+              </p>
+       
+        
+        <button type="submit" >Enviar</button>
+        <p id="error" class="error"></p>
+      </form>
+      
+
+   <script src="script.js"></script>
+</body>
+</html>

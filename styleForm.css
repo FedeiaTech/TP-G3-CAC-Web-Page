@@ -77,7 +77,7 @@ form .button input:hover{
     /* uso la pseudo clase hover para generar una pequeña animacion en el boton */
     background: linear-gradient(130deg,#fedfcc,#9c72a9f2);
 }
-.was-validated small{
+.invalido{
     display: block;
     color: red;
 }

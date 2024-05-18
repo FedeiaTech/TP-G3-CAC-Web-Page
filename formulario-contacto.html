@@ -3,64 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleForm.css">
     <title>Contacto</title>
 </head>
-<body>
+<body class="formulario-contacto">
     <div class="container-formulario-contacto">
         <div class="title">Contacto</div>
-        <form id="form-validation" novalidate>
+        <form id="contacto" method="post">
             <div class="form-group">
                 <span>Nombre</span>
-                <input type="text" placeholder="Escriba aquí su nombre" required>
-                <small>Por favor, ingrese su nombre</small>
+                <input id="nombre" name="nombre" type="text" placeholder="Escriba aquí su nombre" >
+                <small id="snombre">Por favor, ingrese su nombre</small>
             </div>
             <div class="form-group">
                 <span>Apellido</span>
-                <input type="text" placeholder="Ingrese su apellido" required>
-                <small>Por favor, ingrese su apellido</small>
+                <input id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido">
+                <small id="sapellido">Por favor, ingrese su apellido</small>
             </div>
             <div class="form-group">
                 <span>Edad</span>
-                <input type="text" placeholder="Decinos tu edad" required>
-                <small>Por favor, ingrese su edad</small>
+                <input id="edad" name="edad" type="number" placeholder="Decinos tu edad" >
+                <small id="sedad">Por favor, ingrese su edad</small>
             </div>
-            <div class="form-group">
-                <span>Provincia de residencia</span>
-                <input type="text" placeholder="Provincia en que vivís" required>
-                <small>Por favor, indique su provincia</small>
-            </div>
+          
             <div class="form-group">
                 <span>Email</span>
-                <input type="email" placeholder="Escriba aquí su email" required>
-                <small>Por favor, ingrese su email</small>
+                <input id="email" name="email" type="email" placeholder="Escriba aquí su email" >
+                <small id="semail">Por favor, ingrese su email</small>
             </div>
+
             <div class="form-group">
                 <span>Teléfono</span>
-                <input type="number" placeholder="numero de Teléfono" required>
-                <small>Por favor, ingrese su teléfono</small>
+                <input id="telefono" name="telefono"type="number" placeholder="Número de teléfono">
+                <small id="stelefono">Por favor, ingrese su teléfono</small>
             </div>
+
+            <div class="form-group">
+                <span>Teléfono 2</span>
+                <input id="telefono2" name="telefono2" type="number" placeholder="Número de teléfono alternativo" >
+            </div>
+
             <div class="campo">
                 <label>Mensaje</label>
-                <textarea class="input-text" required></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="Escriba lo que quieras comentar"></textarea>
+                <small id="smensaje">Por favor, ingrese sus comentarios en menos de 1000 caracteres</small>
             </div>
             
             <div class="button">
                 <input type="submit" value="Solicitar contacto">
+                <p id="error" class="error"></p>
             </div>
         </form>
     </div>
     
     <script>
-        const addForm=document.getElementById("form-validation");
-        addForm.addEventListener("submit", (e)=>{
-            if(addForm.checkValidity() === false){
-               e.preventDefault();
-               e.stopPropagation();
-               addForm.classList.add("was-validated");
-               return false;
-            }
-        })
+const contacto=document.getElementById("contacto");
+const nombre=document.getElementById("nombre");
+const snombre=document.getElementById("snombre");
+const apellido=document.getElementById("apellido");
+const sapellido=document.getElementById("sapellido");
+const edad=document.getElementById("edad");
+const sedad=document.getElementById("sedad");
+const email=document.getElementById("email");
+const semail=document.getElementById("semail");
+const telefono=document.getElementById("telefono");
+const stelefono=document.getElementById("stelefono");
+const mensaje=document.getElementById("mensaje");
+const smensaje=document.getElementById("smensaje");
+const parrafo=document.getElementById("error");
+contacto.addEventListener("submit",e=>{
+e.preventDefault();
+e.stopPropagation();
+    let warning="";
+    let valor1=false;
+    let valor2=false;
+    let valor3=false;
+    let valor4=false;
+    let valor5=false;
+    let valor6=false;
+    parrafo.innerHTML="";
+    let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+    if(nombre.value.length<3||typeof nombre.value!=="string"){
+        // 
+        // warning+="Nombre no válido<br>";
+        valor1=true;
+        snombre.classList.add("invalido");
+    }
+    if(apellido.value.length<3||typeof apellido.value!=="string"){
+        // ||typeof apellido.value.trim!=="string"
+        // warning+="Apellido no válido<br>";
+        valor2=true;
+        sapellido.classList.add("invalido");
+    }
+    if(edad.value<18||edad.value>110){
+        // ||typeof edad.value.trim!=="number"
+        // warning+="Edad no válida<br>";
+        valor3=true;
+        sedad.classList.add("invalido");
+    }
+        
+    if(!regexEmail.test(email.value)){
+        // warning+="Email no válido<br>";
+        valor4=true;
+        semail.classList.add("invalido");
+    }
+
+    if(!telefono.value.match(phoneno)){
+        // warning+="Telefono no válido<br>";
+        valor5=true;
+        stelefono.classList.add("invalido");
+    }
+    if(mensaje.value.trim().length>600){
+        // warning+="Telefono no válido<br>";
+        valor5=true;
+        smensaje.classList.add("invalido");
+    }
+    
+    if(valor1||valor2||valor3||valor4||valor5||valor6){
+        parrafo.innerHTML="Hay algún error";
+    }else{
+        parrafo.innerHTML="Enviado";
+        contacto.reset();
+    }
+})
+    
     </script>
+    
 </body>
 </html>

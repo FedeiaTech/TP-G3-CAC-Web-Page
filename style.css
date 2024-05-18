@@ -349,14 +349,14 @@ a {
 small{
     display: none;
 }
-body{
+body .formulario-contacto{
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
     background: linear-gradient(130deg,#fedfcc,#9c72a9f2);
-}
+} 
 .container-formulario-contacto{
     max-width: 700px;
     width:100%;
@@ -374,11 +374,11 @@ body{
     justify-content:space-between;
     margin:10 px 12 px 0;
 }
-form .form-group{
+ form .form-group{
     margin-bottom: 15px;
     width:calc(100%/2-20px);
 }
-form span{
+ form span{
     display:block;
     font-weight: 500;
     margin-bottom: 5px;
@@ -397,12 +397,12 @@ form span{
 .form-group input:valid{
     border-color: skyblue;
 }
-form .button{
+ form .button{
     width:100%;
     height: 40px;
     margin: 40px 0;
 }
-form .button input{
+ form .button input{
     width:100%;
     height: 100%;
     outline: none;
@@ -414,15 +414,15 @@ form .button input{
     border: none;
     border-radius: 5px;
 }
-form .button input:hover{
+ form .button input:hover{
     /* uso la pseudo clase hover para generar una pequeña animacion en el boton */
     background: linear-gradient(130deg,#fedfcc,#9c72a9f2);
 }
-.was-validated small{
+ .was-validated small{
     display: block;
     color: red;
 }
-.campo {
+ .campo {
     margin-bottom: 1rem;
 }
 .campo label {
@@ -436,37 +436,37 @@ form .button input:hover{
     width:40rem;
 }
 
-.input-text {
+ .input-text {
     width: 100%;
     border: none;
     padding: 1.5rem;
     border-radius: .5rem;
 }
 @media(max-width:584px){
-    .container-formulario-contacto{
+     .container-formulario-contacto{
         max-width: 100%;
     }
 
-    form .form-group{
+     form .form-group{
         margin-bottom: 15px;
         width:100%;
     }
-    .container-formulario-contacto form{
+     .container-formulario-contacto form{
         max-height: 400px;
         overflow-y: scroll;
     }
-    .container-formulario-contacto form::-webkit-scrollbar{
+     .container-formulario-contacto form::-webkit-scrollbar{
         width: 0;
         /* para invisibilizar la barra scroll */
     }
-    form .button{
+     form .button{
         margin:20px 0px;
     }
-    .campo textarea {
+     .campo textarea {
         height: 300px;
         width: 400px;
     }
-}
+} 
 
 /*Media Query Header Nav- Responsividad*/
 @media only screen and (max-width:895px) {
