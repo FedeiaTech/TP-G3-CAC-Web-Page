@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
-    
+
     <link rel="shortcut icon" href="images/logo-contacto.png" type="image/x-icon">
     <!-- estilos -->
-    <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="/modal.css">
+    <link rel="stylesheet" href="/style.css">
+
     <!-- <link rel="stylesheet" href="modal.css"> -->
-     <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-         rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <title>Contacto</title>
 </head>
-<body class="formulario-contacto">
+
+<body>
     <!-- Encabezado -->
     <header class="header">
         <section class="header-info">
@@ -35,10 +37,10 @@
                 <!-- Hipervinculos para el menu -->
                 <div class="navbar-links">
                     <ul class="navbar-list">
-                        <li class="nav-item"><a href="index.html"> Inicio</a></li>
-                        <li class="nav-item"><a href="#quienes-somos"> Quiénes somos</a></li>
-                        <li class="nav-item"><a href="#planes-online">Planes online</a></li>
-                        <li class="nav-item"><a href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="index.html">Quiénes somos</a></li>
+                        <li class="nav-item"><a href="index.html">Planes online</a></li>
+                        <li class="nav-item"><a href="formulario-contacto.html">Contacto</a></li>
                     </ul>
                     <!-- Buscador -->
                     <div class="navbar-search">
@@ -99,62 +101,67 @@
         </section>
     </header>
 
+    <!-- Formulario de contacto -->
     <main>
-        <div class="container-formulario-contacto">
-            <div class="title">Contacto</div>
-            <form id="contacto" method="post">
-                <div class="form-group">
-                    <span>Nombre</span>
-                    <input id="nombre" name="nombre" type="text" placeholder="Escriba aquí su nombre" >
-                    <small id="snombre">Por favor, ingrese su nombre</small>
-                </div>
-                <div class="form-group">
-                    <span>Apellido</span>
-                    <input id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido">
-                    <small id="sapellido">Por favor, ingrese su apellido</small>
-                </div>
-                <div class="form-group">
-                    <span>Edad</span>
-                    <input id="edad" name="edad" type="number" placeholder="Decinos tu edad" >
-                    <small id="sedad">Por favor, ingrese su edad</small>
-                </div>
-            
-                <div class="form-group">
-                    <span>Email</span>
-                    <input id="email" name="email" type="email" placeholder="Escriba aquí su email" >
-                    <small id="semail">Por favor, ingrese su email</small>
-                </div>
+        <section class="formulario-contacto">
+            <div class="container-formulario-contacto">
+                <div class="title">Contacto</div>
+                <form id="contacto-form" method="post">
+                    <div class="form-group">
+                        <span>Nombre</span>
+                        <input id="nombre" name="nombre" type="text" placeholder="Escriba aquí su nombre">
+                        <small id="snombre">Por favor, ingrese su nombre</small>
+                    </div>
+                    <div class="form-group">
+                        <span>Apellido</span>
+                        <input id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido">
+                        <small id="sapellido">Por favor, ingrese su apellido</small>
+                    </div>
+                    <div class="form-group">
+                        <span>Edad</span>
+                        <input id="edad" name="edad" type="number" placeholder="Ingrese su edad">
+                        <small id="sedad">Por favor, ingrese su edad</small>
+                    </div>
 
-                <div class="form-group">
-                    <span>Teléfono</span>
-                    <input id="telefono" name="telefono"type="number" placeholder="Número de teléfono">
-                    <small id="stelefono">Por favor, ingrese su teléfono</small>
-                </div>
+                    <div class="form-group">
+                        <span>Email</span>
+                        <input id="email" name="email" type="email" placeholder="Escriba aquí su email">
+                        <small id="semail">Por favor, ingrese su email</small>
+                    </div>
 
-                <div class="form-group">
-                    <span>Teléfono 2</span>
-                    <input id="telefono2" name="telefono2" type="number" placeholder="Teléfono alternativo" >
-                </div>
+                    <div class="form-group">
+                        <span>Teléfono</span>
+                        <input id="telefono" name="telefono" type="number" placeholder="Número de teléfono">
+                        <small id="stelefono">Por favor, ingrese su teléfono</small>
+                    </div>
 
-                <div class="campo">
-                    <label>Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe lo que quieras comentar"></textarea>
-                    <small id="smensaje">Por favor, ingrese sus comentarios en menos de 00 caracteres</small>
-                </div>
-                
-                <div class="button">
-                    <input type="submit" value="Solicitar contacto">
-                    <p id="error" class="error"></p>
-                </div>
-            </form>
-        </div>
+                    <div class="form-group">
+                        <span>Teléfono 2</span>
+                        <input id="telefono2" name="telefono2" type="number" placeholder="Teléfono alternativo">
+                    </div>
+
+                    <div class="campo">
+                        <label>Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe lo que quieras comentar"></textarea>
+                        <small id="smensaje">Por favor, ingrese sus comentarios en menos de 200 caracteres</small>
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Solicitar contacto">
+                        <p id="error" class="error"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
-     <!-- Footer, contacto y redes -->
-     <footer class="footer">
+
+
+    <!-- Footer, contacto y redes -->
+    <footer class="footer">
         <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Inicio</h3>
+                    <h3 class="footer-titulo"> <a href="index.html">Inicio</a></h3>
                     <ul class="footer-info-lista-items">
                         <li class="footer-info-items-li">
                             <a href="#" class="footer-items-link" data-modal-class="modal1">¿Quieres trabajar con
@@ -219,16 +226,16 @@
 
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Quienes somos</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Quienes somos</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Planes online</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Planes online</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Testimonios</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Testimonios</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Contacto</h3>
+                    <h3 class="footer-titulo"><a href="formulario-contacto.html">Contacto</a></h3>
                 </article>
 
                 <article class="footer-info-lista">
@@ -264,69 +271,70 @@
             </p>
         </section>
     </footer>
-    <script src="app1.js">
-// const contacto=document.getElementById("contacto");
-// const nombre=document.getElementById("nombre");
-// const snombre=document.getElementById("snombre");
-// const apellido=document.getElementById("apellido");
-// const sapellido=document.getElementById("sapellido");
-// const edad=document.getElementById("edad");
-// const sedad=document.getElementById("sedad");
-// const email=document.getElementById("email");
-// const semail=document.getElementById("semail");
-// const telefono=document.getElementById("telefono");
-// const stelefono=document.getElementById("stelefono");
-// const mensaje=document.getElementById("mensaje");
-// const smensaje=document.getElementById("smensaje");
-// const parrafo=document.getElementById("error");
-// contacto.addEventListener("submit",e=>{
-// e.preventDefault();
-// e.stopPropagation();
-//     let valor1=false;
-//     let valor2=false;
-//     let valor3=false;
-//     let valor4=false;
-//     let valor5=false;
-//     let valor6=false;
-//     parrafo.innerHTML="";
-//     let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//     let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    <script src="app1.js"></script>
 
-//     if(nombre.value.length<3||typeof nombre.value!=="string"){
-//         valor1=true;
-//         snombre.classList.add("invalido");
-//     }
-//     if(apellido.value.length<3||typeof apellido.value!=="string"){
-//         valor2=true;
-//         sapellido.classList.add("invalido");
-//     }
-//     if(edad.value<18||edad.value>110){
-//         valor3=true;
-//         sedad.classList.add("invalido");
-//     }
-        
-//     if(!regexEmail.test(email.value)){
-//         valor4=true;
-//         semail.classList.add("invalido");
-//     }
-
-//     if(!telefono.value.match(phoneno)){
-//         valor5=true;
-//         stelefono.classList.add("invalido");
-//     }
-//     if(mensaje.value.trim().length>600){
-//         valor5=true;
-//         smensaje.classList.add("invalido");
-//     }
-    
-//     if(valor1||valor2||valor3||valor4||valor5||valor6){
-//         parrafo.innerHTML="Hay algún error";
-//     }else{
-//         parrafo.innerHTML="Enviado";
-//         contacto.reset();
-//     }
-// }) 
-    </script>
-    
 </body>
+
 </html>
+
+<!-- const contacto=document.getElementById("contacto");
+const nombre=document.getElementById("nombre");
+const snombre=document.getElementById("snombre");
+const apellido=document.getElementById("apellido");
+const sapellido=document.getElementById("sapellido");
+const edad=document.getElementById("edad");
+const sedad=document.getElementById("sedad");
+const email=document.getElementById("email");
+const semail=document.getElementById("semail");
+const telefono=document.getElementById("telefono");
+const stelefono=document.getElementById("stelefono");
+const mensaje=document.getElementById("mensaje");
+const smensaje=document.getElementById("smensaje");
+const parrafo=document.getElementById("error");
+contacto.addEventListener("submit",e=>{
+e.preventDefault();
+e.stopPropagation();
+     let valor1=false; 
+     let valor2=false;
+      let valor3=false;
+      let valor4=false;
+      let valor5=false;
+      let valor6=false;
+      parrafo.innerHTML="";
+      let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+      if(nombre.value.length<3||typeof nombre.value!=="string"){
+          valor1=true;
+          snombre.classList.add("invalido");
+     }
+      if(apellido.value.length<3||typeof apellido.value!=="string"){
+          valor2=true;
+          sapellido.classList.add("invalido");
+      }
+      if(edad.value<18||edad.value>110){
+          valor3=true;
+          sedad.classList.add("invalido");
+      }
+        
+      if(!regexEmail.test(email.value)){
+          valor4=true;
+          semail.classList.add("invalido");
+      }
+
+      if(!telefono.value.match(phoneno)){
+         valor5=true;
+          stelefono.classList.add("invalido");
+      }
+      if(mensaje.value.trim().length>600){
+          valor5=true;
+          smensaje.classList.add("invalido");
+      }
+    
+      if(valor1||valor2||valor3||valor4||valor5||valor6){
+          parrafo.innerHTML="Hay algún error";
+      }else{
+          parrafo.innerHTML="Enviado";
+          contacto.reset();
+      }
+      }) -->

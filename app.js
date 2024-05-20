@@ -169,11 +169,7 @@ const agregarProducto = document.querySelector(".carga-producto");
 
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
-const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes. Si usamos esta constante los modals en index NO andan
-
-/* Pruebas distintas para tratar de arreglar el error en modals */
-//const listaPlanes = document.querySelector(".compra-planes"); 
-// const listaPlanes = document.querySelector(".planes-seccion-container"); Si usamos esta constante el modals anda bien en el index
+const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -283,7 +279,8 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
     contarProductos.innerText = totalDePlanesAgregados;
 };
 
-// validacion del formulario de contacto
+/* validacion del formulario de contacto */
+
 const contacto=document.getElementById("contacto");
 const nombre=document.getElementById("nombre");
 const snombre=document.getElementById("snombre");
