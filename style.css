@@ -363,7 +363,7 @@ body .formulario-.container-formulario-contacto{
     padding: 25px 30px;
     background-color: #fff;
     border-radius: 5px;
-}
+} */
 .container-formulario-contacto .title{
     font-size: 25px;
     font-weight: 500;
@@ -413,11 +413,11 @@ form .button input{
     font-weight: 500;
     border: none;
     border-radius: 5px;
-}
-form .button input:hover{
+} */
+form .button input:hover{ */
     /* uso la pseudo clase hover para generar una pequeña animacion en el boton */
     background: linear-gradient(130deg,#fedfcc,#9c72a9f2);
-}
+} 
 .invalido{
     display: block;
     color: red;
@@ -458,7 +458,7 @@ form .button input:hover{
         overflow-y: scroll;
     }
     .container-formulario-contacto form::-webkit-scrollbar{
-        width: 0; */
+        width: 0; 
         /* para invisibilizar la barra scroll */
     /* }
     form .button{
@@ -469,8 +469,8 @@ form .button input:hover{
         width: 400px;
 
     } */
-/* }
-
+}
+}
 /*Media Query Header Nav- Responsividad*/
 @media only screen and (max-width:895px) {
 
