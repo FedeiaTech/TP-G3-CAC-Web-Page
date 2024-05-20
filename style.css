@@ -349,14 +349,14 @@ a {
 small{
     display: none;
 }
-/* body{
+body .formulario-.container-formulario-contacto{
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
     background: linear-gradient(130deg,#fedfcc,#9c72a9f2);
-} */
+}
 .container-formulario-contacto{
     max-width: 700px;
     width:100%;
@@ -444,7 +444,7 @@ form .button input:hover{
     padding: 0.5rem;
     border-radius: .5rem;
 }
-/* @media(max-width:584px){
+@media(max-width:584px){
     .container-formulario-contacto{
         max-width: 100%;
     }
@@ -469,7 +469,7 @@ form .button input:hover{
         width: 400px;
 
     } */
-/* } */
+/* }
 
 /*Media Query Header Nav- Responsividad*/
 @media only screen and (max-width:895px) {
