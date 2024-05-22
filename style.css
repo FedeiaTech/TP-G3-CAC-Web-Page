@@ -428,9 +428,9 @@ small{
     display: none;
 }
 
-.formulario.container-formulario-contacto{
+.formulario-contacto{
     display: flex;
-    height: 100vh;
+    height: 120vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -440,11 +440,11 @@ small{
 .container-formulario-contacto{
     max-width: 700px;
     width:100%;
-    padding: 25px 30px;
+    padding: 30px 30px;
     background-color: #fff;
     border-radius: 5px;
     margin-top: 150px;
-    margin-left: 400px;
+    margin-left: 150px;
     margin-bottom: 200px;
 } 
 
@@ -549,7 +549,7 @@ form .button input:hover{
 
     form .form-group{
         margin-bottom: 15px;
-        width:100%;
+        width:90%;
     }
     .container-formulario-contacto form{
         max-height: 300px;
@@ -558,6 +558,11 @@ form .button input:hover{
     .container-formulario-contacto form::-webkit-scrollbar{
         width: 0; 
     }
+    .campo textarea {
+        height: 300px;
+        width: 200px;
+
+    }
 
 }
         /* para invisibilizar la barra scroll */
@@ -565,11 +570,7 @@ form .button input:hover{
     form .button{
         margin:20px 0px;
     } */
-    /* .campo textarea {
-        height: 300px;
-        width: 400px;
-
-    } */
+    
 
 
 /*Estilos Quienes somos*/
@@ -753,6 +754,12 @@ form .button input:hover{
 
     .carrousel-control-proximo {
         margin-right: 0;
+    }
+    /* campo de texto formulario de contacto */
+    .campo textarea {
+        height: 300px;
+        width: 300px;
+
     }
 }
 
