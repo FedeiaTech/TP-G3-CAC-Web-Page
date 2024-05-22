@@ -24,9 +24,13 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-/* Esto evitara que el css afecte a los div denominados con este id*/
+/* Esto evitara que el css afecte a los div denominados con esta clase*/
 #no-afectar-css{
     all: initial; 
+}
+
+.no-afectar-css{
+    all: initial;
 }
 
 /* Estilos de Header y NavBar */
@@ -763,6 +767,8 @@ form .button input:hover{
 }
 
 .planes-seccion-container {
+    
+    width: 20%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;

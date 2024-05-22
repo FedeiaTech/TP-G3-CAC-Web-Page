@@ -279,9 +279,9 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
     contarProductos.innerText = totalDePlanesAgregados;
 };
 
-/* validacion del formulario de contacto */
+// validacion del formulario de contacto
 
-const contacto=document.getElementById("contacto");
+const contacto=document.getElementById("contacto-form");
 const nombre=document.getElementById("nombre");
 const snombre=document.getElementById("snombre");
 const apellido=document.getElementById("apellido");
